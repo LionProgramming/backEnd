@@ -8,7 +8,7 @@ use App\Http\Controllers\API\UsuarioController;
 Route::controller(UsuarioController::class)->group(function(){
     Route::get('/usuarios', 'index');
     Route::post('/createusuarios','store');
-    Route::get('/usuarios/{id}','show');
+    Route::get('/usuarioshow/{id}','show');
     Route::post('/usuarios/{id}', 'update');
     Route::delete('/usuarios/deleteusuario/{id}', 'destroy');
 });

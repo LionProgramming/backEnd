@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Faker\Generator as Faker;
+
 use App\Models\Usuario;
 
 class UsuarioFactory extends Factory
@@ -34,4 +35,4 @@ class UsuarioFactory extends Factory
     }
 }
 /* para agregar randoms */
-/* php artisan db:seed --class=RandomUserSeeder */
+/* php artisan db:seed --class=UsuariosSeeder */
