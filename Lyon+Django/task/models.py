@@ -246,7 +246,7 @@ class Usuarios(models.Model):
             return f"{self.nombre1} {self.nombre2} {self.apellido1}"
         else:
             return f"{self.nombre1} {self.apellido1}"
-     
+        
     class Meta:
         managed = False
         db_table = 'usuarios'
