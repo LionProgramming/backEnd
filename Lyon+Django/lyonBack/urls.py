@@ -17,9 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from rest_framework.documentation import include_docs_urls 
+from task import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include('task.urls')),  # Ruta principal para la API
     path('docs/', include_docs_urls(title="Lyon Programming API's")), #documentacion de la api
+    path('contar_usuarios_por_rol/', views.contar_usuarios_por_rol, name='contar_usuarios_por_rol'),
     #Para ver la documentacion completa: http://127.0.0.1:8000/docs
 ]

@@ -13,5 +13,5 @@ router.register(r'observaciones', views.ObservacionesView, 'observaciones')
 
 urlpatterns = [
     path('', include(router.urls)),
-   
+    path('contar_usuarios_por_rol/', views.contar_usuarios_por_rol, name='contar_usuarios_por_rol'),
 ]
