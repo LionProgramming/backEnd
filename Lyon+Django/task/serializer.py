@@ -33,9 +33,18 @@ class HorariosSerializer(serializers.ModelSerializer):
         fields='__all__'
 
 class GradosSerializer(serializers.ModelSerializer):
+    director_nombre = serializers.SerializerMethodField(read_only=True)
+    def get_director_nombre(self, obj):
+        nombre1=obj.director.nombre1
+        nombre2=obj.director.nombre2 if obj.director.nombre2 else ''
+        apellido1=obj.director.apellido1 
+        apellido2=obj.director.apellido2 if obj.director.apellido2 else ''
+        return f"{nombre1} {nombre2} {apellido1} {apellido2}"
     class Meta:
         model= Grados
-        fields='__all__'
+        fields=['numero','salonasignado','cantidadestudiantes','nombre','anio','director','director_nombre']
+
+   
 
 class ObservacionesSerializer(serializers.ModelSerializer):
     class Meta:

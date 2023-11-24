@@ -135,7 +135,7 @@ class Grados(models.Model):
     cantidadestudiantes = models.IntegerField(db_column='cantidadEstudiantes', db_comment='Conjunto expresado de manera cuantitativa el n·mero de Estudiantes (Este campo es obligatorio).')  # Field name made lowercase.
     nombre = models.IntegerField()
     anio = models.CharField(max_length=4, blank=True, null=True)
-    director = models.ForeignKey('Usuarios', models.DO_NOTHING, db_column='director')
+    director = models.ForeignKey('Usuarios', models.DO_NOTHING, db_column='director',null=True)
 
     def __str__(self) -> str:
         return f"{self.nombre}"
@@ -231,7 +231,7 @@ class Usuarios(models.Model):
     apellido1 = models.CharField(max_length=45)
     apellido2 = models.CharField(max_length=45, blank=True, null=True)
     email = models.CharField(unique=True, max_length=100)
-    telefono_fijo = models.IntegerField(blank=True, null=True)
+    telefono_fijo = models.BigIntegerField(blank=True, null=True)
     telefono_celular = models.BigIntegerField()
     contrasenia = models.CharField(max_length=30)
     urlfoto = models.CharField(db_column='urlFoto', max_length=200, blank=True, null=True)  # Field name made lowercase.
