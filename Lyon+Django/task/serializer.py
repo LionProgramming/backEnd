@@ -42,7 +42,7 @@ class GradosSerializer(serializers.ModelSerializer):
         return f"{nombre1} {nombre2} {apellido1} {apellido2}"
     class Meta:
         model= Grados
-        fields=['numero','salonasignado','cantidadestudiantes','nombre','anio','director','director_nombre']
+        fields=['numero','salonasignado','nombre','anio','director','director_nombre']
 
    
 

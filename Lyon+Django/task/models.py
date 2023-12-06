@@ -118,7 +118,6 @@ class DjangoSession(models.Model):
 class Grados(models.Model):
     numero = models.AutoField(primary_key=True, db_comment='Identificador en forma de presentaci¾n numÚrica o alfanumÚrica que muestra el nivel en el que estß clasificado el Estudiante (Este campo es obligatorio).')
     salonasignado = models.IntegerField(db_column='salonAsignado', db_comment='Espacio designado para la instrucci¾n de Profesor a Estudiante (Este campo es obligatorio).')  # Field name made lowercase.
-    cantidadestudiantes = models.IntegerField(db_column='cantidadEstudiantes', db_comment='Conjunto expresado de manera cuantitativa el n·mero de Estudiantes (Este campo es obligatorio).')  # Field name made lowercase.
     nombre = models.IntegerField()
     anio = models.CharField(max_length=4, blank=True, null=True)
     director = models.ForeignKey('Usuarios', models.DO_NOTHING, db_column='director',null=True)
