@@ -10,9 +10,10 @@ router.register(r'users', views.UsuariosView, 'usuarios')
 router.register(r'horarios', views.HorariosView, 'horarios')
 router.register(r'grados', views.GradosView, 'grados')
 router.register(r'observaciones', views.ObservacionesView, 'observaciones')
+router.register(r'gradosEstudiantes',views.GradosEstudiantesView,'Cantidad de estudiantes por grado')
 
 urlpatterns = [
     path('', include(router.urls)),
     path('contar_usuarios_por_rol/', views.contar_usuarios_por_rol, name='contar_usuarios_por_rol'),
-    
+    path('login/',views.login_view,name='login')
 ]

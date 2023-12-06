@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Usuarios,Horarios,Grados,Observaciones,Roles
+from .models import Usuarios,Horarios,Grados,Observaciones,Roles,GradosEstudiantes
 
 class RolesSerializer(serializers.ModelSerializer):
     class Meta:
@@ -49,4 +49,10 @@ class GradosSerializer(serializers.ModelSerializer):
 class ObservacionesSerializer(serializers.ModelSerializer):
     class Meta:
         model= Observaciones
+        fields='__all__'
+
+
+class GradosEstudiantesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=GradosEstudiantes
         fields='__all__'

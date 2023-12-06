@@ -219,7 +219,7 @@ class Usuarios(models.Model):
     email = models.CharField(unique=True, max_length=100)
     telefono_fijo = models.BigIntegerField(blank=True, null=True)
     telefono_celular = models.BigIntegerField()
-    contrasenia = models.CharField(max_length=30)
+    contrasenia = models.CharField(max_length=200)
     urlfoto = models.CharField(db_column='urlFoto', max_length=200, blank=True, null=True)  # Field name made lowercase.
     tipo_idtipodocumento = models.ForeignKey(Tiposdocumentos, models.DO_NOTHING, db_column='Tipo_idTipoDocumento',)#Field name made lowercase.
     rol_idrol = models.ForeignKey(Roles, models.DO_NOTHING, db_column='Rol_idRol')  # Field name made lowercase.
@@ -236,3 +236,14 @@ class Usuarios(models.Model):
     class Meta:
         managed = False
         db_table = 'usuarios'
+
+class GradosEstudiantes(models.Model):
+    idGrados=models.AutoField(primary_key=True)
+    grados_id=models.ForeignKey(Grados,models.DO_NOTHING,db_column="grados_id")
+    usuarios_id=models.ForeignKey(Usuarios, models.DO_NOTHING,db_column="usuarios_id")
+
+    class Meta:
+        managed=False
+        db_table='grados_estudiantes'
+
+    

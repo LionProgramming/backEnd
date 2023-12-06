@@ -23,5 +23,6 @@ urlpatterns = [
     path('api/v1/', include('task.urls')),  # Ruta principal para la API
     path('docs/', include_docs_urls(title="Lyon Programming API's")), #documentacion de la api
     path('contar_usuarios_por_rol/', views.contar_usuarios_por_rol, name='contar_usuarios_por_rol'),
+    path('login/',views.login_view, name='login')
     #Para ver la documentacion completa: http://127.0.0.1:8000/docs
 ]
