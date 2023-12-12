@@ -28,9 +28,14 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class HorariosSerializer(serializers.ModelSerializer):
-    class Meta:
-        model= Horarios
+    nombre =serializers.SerializerMethodField()
+    class Meta: 
+        model=Horarios
         fields='__all__'
+    
+    def get_nombre(self,obj):
+        return obj.numero_curso.nombre if obj.numero_curso else None
+  
 
 class GradosSerializer(serializers.ModelSerializer):
     director_nombre = serializers.SerializerMethodField(read_only=True)

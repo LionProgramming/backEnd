@@ -223,6 +223,7 @@ class Usuarios(models.Model):
     tipo_idtipodocumento = models.ForeignKey(Tiposdocumentos, models.DO_NOTHING, db_column='Tipo_idTipoDocumento',)#Field name made lowercase.
     rol_idrol = models.ForeignKey(Roles, models.DO_NOTHING, db_column='Rol_idRol')  # Field name made lowercase.
     estado = models.IntegerField(db_column='Estado')  # Field name made lowercase.
+    curso=models.ForeignKey(Grados, models.DO_NOTHING, db_column='curso',null=True)
 
     def __str__(self) -> str:
         if self.nombre2 and self.apellido2:
