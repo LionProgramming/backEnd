@@ -29,7 +29,7 @@ CREATE TABLE `horarios` (
   PRIMARY KEY (`idHorario`),
   KEY `fk_cursos` (`numero_curso`),
   CONSTRAINT `fk_cursos` FOREIGN KEY (`numero_curso`) REFERENCES `grados` (`numero`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `horarios` (
 
 LOCK TABLES `horarios` WRITE;
 /*!40000 ALTER TABLE `horarios` DISABLE KEYS */;
-INSERT INTO `horarios` VALUES (2,'https://drive.google.com/file/d/1CkQOPlW0bbffsP_MqT3-0CHXU_0_QOS-/view?usp=sharing',1);
+INSERT INTO `horarios` VALUES (2,'https://drive.google.com/file/d/1CkQOPlW0bbffsP_MqT3-0CHXU_0_QOS-/view?usp=sharing',1),(3,'https://reactstrap.github.io/?path=/docs/components-toast--toast',2),(4,'https://reactstrap.github.io/?path=/docs/components-toast--toast',2),(5,'https://reactstrap.github.io/?path=/docs/components-toast--toast',3);
 /*!40000 ALTER TABLE `horarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-12-06 16:35:54
+-- Dump completed on 2023-12-12 20:15:10
