@@ -8,7 +8,7 @@ class RolesSerializer(serializers.ModelSerializer):
 
 class UserSerializer(serializers.ModelSerializer):
     rol_info = RolesSerializer(source='rol', read_only=True)
-
+    nombre_curso = serializers.CharField(source='curso.nombre', read_only=True)
     class Meta:
         model = Usuarios
         fields = '__all__'

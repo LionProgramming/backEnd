@@ -12,7 +12,7 @@ from django.views.decorators.csrf import csrf_exempt
 class UsuariosView(viewsets.ModelViewSet):
     serializer_class = UserSerializer
     queryset = Usuarios.objects.all()
-
+    usuarios_con_grados = Usuarios.objects.select_related('curso').all()
     def create(self,request, *args, **kwargs):
         contrasenia= request.data.get('contrasenia')
         hashed_password= make_password(contrasenia)

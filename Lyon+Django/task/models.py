@@ -224,7 +224,8 @@ class Usuarios(models.Model):
     rol_idrol = models.ForeignKey(Roles, models.DO_NOTHING, db_column='Rol_idRol')  # Field name made lowercase.
     estado = models.IntegerField(db_column='Estado')  # Field name made lowercase.
     curso=models.ForeignKey(Grados, models.DO_NOTHING, db_column='curso',null=True)
-
+    
+   
     def __str__(self) -> str:
         if self.nombre2 and self.apellido2:
             return f"{self.nombre1} {self.nombre2} {self.apellido1} {self.apellido2}" 
