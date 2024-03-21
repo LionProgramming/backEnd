@@ -82,10 +82,16 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'lyondb',
-        'USER': 'root',
-        'PASSWORD':'',
-        'HOST':'127.0.0.1',
+        'USER': 'lionadmin',
+        'PASSWORD':'2558108g*',
+        'HOST':'liondbsql.mysql.database.azure.com',
         'PORT':'3306',
+        'OPTIONS': {
+            'ssl': {
+                'ca': BASE_DIR / 'DigiCertGlobalRootCA.crt.pem',
+                    }
+            }
+        
     }
 }
 
