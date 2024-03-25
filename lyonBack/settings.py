@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-1cfy@y^cv641^d35agcp6wgs=-$@2ikla6fcbhz!#2i)=v#dwy
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]', '169.254.131.4', '169.254.131.5']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]', '169.254.131.4', '169.254.131.5', "observadorlion.azurewebsites.net"]
 
 
 # Application definition
@@ -141,6 +141,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://localhost:8081",
     "169.254.131.4",
+    "observadorlion.azurewebsites.net"
 
 ]
 
