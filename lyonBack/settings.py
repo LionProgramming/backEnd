@@ -141,7 +141,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://localhost:8081",
     "169.254.131.4",
-    "observadorlion.azurewebsites.net"
+    "observadorlion.azurewebsites.net",
+    "https://orange-coast-0d45c5910.5.azurestaticapps.net",
 
 ]
 
